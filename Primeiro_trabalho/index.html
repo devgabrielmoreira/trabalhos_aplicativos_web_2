@@ -1,0 +1,68 @@
+<!************************************************************************>
+<!*** Fundação de Apoio à Escola Técnica                               ***>
+<!*** ETE-ACV - Escola Técnica Estadual Amaury César Vieira            ***>
+<!*** ---------------------------------------------------------------- ***>
+<!*** Disciplina: Aplicativos II                                       ***>
+<!*** Prof. Arnaldo Borges                                             ***>
+<!*** ---------------------------------------------------------------- ***>
+<!*** Programa: Trabalho Formuçário                                    ***>
+<!*** Data: 1303/2023                                                 ***>
+<!*** Aluno programador: Gabriel de Souza Moreira                      ***>
+<!************************************************************************>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+            <title>Formulário Registro de Notas Alunos</title>
+	<style>
+		form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            }
+        label {
+        margin-top: 10px;
+        }
+        input[type="text"],
+        input[type="number"] {
+        padding: 10px;
+        margin: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        width: 100%;
+        max-width: 400px;
+        }
+        button[type="submit"] {
+        padding: 10px 20px;
+        margin-top: 10px;
+        border: none;
+        background-color: #4CAF50;
+        color: white;
+        font-size: 16px;
+        border-radius: 5px;
+        }
+	</style>
+</head>
+<body>
+	<h1></h1>
+	<form method="POST" action="data/registro_notas.php">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+      
+        <label for="materia">Matéria:</label>
+        <input type="text" id="materia" name="materia" required>
+      
+        <label for="nota">Nota:</label>
+        <input type="number" id="nota" name="nota" min="0" max="10" step="0.1" required>
+      
+        <button type="submit">Registrar</button>
+      </form>      
+</body>
+<script src="engine/responsitiv.js"></script>
+</html>
